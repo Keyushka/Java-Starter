@@ -17,5 +17,11 @@ public class C07_Ternary {
 
         string += login.equals("Admin") ? "Administrator" : "User";
         System.out.println(string);
+
+        StringBuilder sb = new StringBuilder();
+        sb.append("Hello");
+        sb. append(" World");
+        sb.append("!");
+        System.out.println(sb);
     }
 }

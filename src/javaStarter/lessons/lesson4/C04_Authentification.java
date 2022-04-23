@@ -9,24 +9,31 @@ public class C04_Authentification {
         // На 10 строке создаём объект класса Scanner для обработки ввода с клавиатуры
         Scanner sc = new Scanner(System.in);
 
-        System.out.print("Введите login: ");
+       // System.out.print("Введите login: ");
 
         // На 17 строке создаем строкову локальную переменную с именем usersLogin
         // и принимаем в нее ввод от пользователя
 
-        String usersLogin = sc.next();
+       // String usersLogin = sc.next();
 
-        if (login.equals(usersLogin)) {
-            System.out.print("Введите password: ");
-            String usersPassword = sc.next();
+        while (true) {
+            System.out.print("Введите login: ");
+            String usersLogin = sc.next();
 
-            if (password.equals(usersPassword)) {
-                System.out.println("Здравствуйте " + usersLogin + ", Вы вошли в систему.");
+            if (login.equals(usersLogin)) {
+                System.out.print("Введите password: ");
+                String usersPassword = sc.next();
+
+                if (password.equals(usersPassword)) {
+                    System.out.println("Здравствуйте " + usersLogin + ", Вы вошли в систему.");
+                    break;
+
+                } else {
+                    System.out.println("Вы ввели неверный пароль!");
+                }
             } else {
-                System.out.println("Вы ввели неверный пароль!");
+                System.out.println("Нет пользователя с таким именем!");
             }
-        } else {
-            System.out.println("Нет пользователя с таким именем!");
         }
     }
 }
