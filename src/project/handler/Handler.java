@@ -33,26 +33,41 @@ public class Handler {
         }*/
 
         Scanner sc = new Scanner(System.in);
-        System.out.print("Введите ставку: ");
         while (true) {
-            int value = sc.nextInt();
-            if (sc.hasNext()) {
-                String command = sc.nextLine();
-                if (command.equals("q")) {
-                    System.out.println("Exit");
+            System.out.print("Введите ставку: ");
+            if(sc.hasNext()) {
+                String val = sc.next();
+                if ("q".equals(val)) {
                     System.exit(0);
                 } else {
-                    System.out.println("Введите корректные значения: ");
-                };
-            } else if (sc.hasNextInt()){
-               // int value = sc.nextInt();
+                    //int number = sc.nextInt();
+                    System.out.println("Мы ввели: ставку = " + val);
+                    System.out.println("Введите риск: ");
+                    String numberDouble = sc.next();
+                    if ("q".equals(numberDouble)) {
+                        System.exit(0);
+                    }
+                    System.out.println("Мы ввели: риск = " + numberDouble);
+                }
+            }
+            //int value = sc.nextInt();
+            //if (sc.hasNext()) {
+            //    String command = sc.nextLine();
+            //    if (command.equals("q")) {
+            //        System.out.println("Exit");
+
+            //    } /*else {
+                    //System.out.println("Введите корректные значения: ");
+              //  };*/
+           /* } else if (sc.hasNextInt()){
+                int value = sc.nextInt();
                 System.out.println("Мы ввели: ставку = " + value);
                 System.out.println("Введите риск: ");
                 double risk = sc.nextDouble();
                 System.out.println("Мы ввели: риск = " + risk);
                 // sc.close();
             }
-            continue;
+            continue;*/
         }
     }
 }
