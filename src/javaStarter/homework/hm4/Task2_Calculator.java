@@ -2,7 +2,7 @@ package javaStarter.homework.hm4;
 
 import java.util.Scanner;
 
-public class Task1_Calculator {
+public class Task2_Calculator {
     public static void main(String[] args) {
         int operand1 = 10;
         int operand2 = 15;
