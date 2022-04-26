@@ -2,7 +2,7 @@ package javaStarter.homework.hm4;
 
 import java.util.Scanner;
 
-public class Task5_Translator {
+public class Task4_Translator {
     public static void main(String[] args) {
         String engWorld;
         Scanner sc = new Scanner(System.in);
