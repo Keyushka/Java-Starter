@@ -1,10 +1,29 @@
 package project.handler;
 
+import project.model.Bet;
+
 import java.awt.*;
 import java.util.Scanner;
 
 public class Handler {
+    private static int value;
+    private static double risk;
     public static void handler(){
+        Scanner sc = new Scanner(System.in);
+        while (true){
+            System.out.println("Please, enter your bet: ");
+            String info = sc.next();
+            if (info.equals("q")){
+                break;
+            } else {
+                value = Integer.parseInt(info);
+                System.out.println("Please, enter your bet: ");
+                risk = sc.nextDouble();
+                System.out.println("Your bet has been added.");
+                Bet firstBet = new Bet(value, risk);
+                System.out.println("If you want to exit, enter q.");
+            }
+        }
         /*Scanner sc = new Scanner(System.in);
         System.out.println("Введите ставку: ");
         int value = sc.nextInt();
@@ -32,7 +51,7 @@ public class Handler {
             continue;
         }*/
 
-        Scanner sc = new Scanner(System.in);
+      //  Scanner sc = new Scanner(System.in);
         while (true) {
             System.out.print("Введите ставку: ");
             if(sc.hasNext()) {
