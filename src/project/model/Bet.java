@@ -9,4 +9,11 @@ public class Bet {
         this.risk = risk;
     }
 
+    @Override
+    public String toString() {
+        return "Bet{" +
+                "value=" + value +
+                ", risk=" + risk +
+                '}';
+    }
 }

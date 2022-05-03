@@ -1,30 +1,38 @@
-package project.handler;
+package project.controller;
 
+import project.dao.BetDao;
+import project.dao.impl.BetDaoImpl;
 import project.model.Bet;
 
-import java.awt.*;
 import java.util.Scanner;
 
 public class Handler {
     private static int value;
     private static double risk;
-    public static void handler(){
+    private static BetDao betDao = new BetDaoImpl();
+
+    public static void handler() {
         Scanner sc = new Scanner(System.in);
-        while (true){
+        while (true) {
             System.out.println("Please, enter your bet: ");
-            String info = sc.next();
-            if (info.equals("q")){
+            String info = sc.nextLine();
+            if (info.equals("q")) {
                 break;
             } else {
-                value = Integer.parseInt(info);
-                System.out.println("Please, enter your bet: ");
-                risk = sc.nextDouble();
+                String[] s = info.split(" ");
+                value = Integer.parseInt(s[0]);
+                risk = Double.parseDouble(s[1]);
                 System.out.println("Your bet has been added.");
-                Bet firstBet = new Bet(value, risk);
+                Bet bet = new Bet(value, risk);
+                betDao.add(bet);
                 System.out.println("If you want to exit, enter q.");
             }
         }
-        /*Scanner sc = new Scanner(System.in);
+        System.out.println(betDao.getBets());
+    }
+}
+
+/*Scanner sc = new Scanner(System.in);
         System.out.println("Введите ставку: ");
         int value = sc.nextInt();
         System.out.println("Введите риск: ");
@@ -51,8 +59,8 @@ public class Handler {
             continue;
         }*/
 
-      //  Scanner sc = new Scanner(System.in);
-        while (true) {
+//  Scanner sc = new Scanner(System.in);
+       /* while (true) {
             System.out.print("Введите ставку: ");
             if(sc.hasNext()) {
                 String val = sc.next();
@@ -68,16 +76,16 @@ public class Handler {
                     }
                     System.out.println("Мы ввели: риск = " + numberDouble);
                 }
-            }
-            //int value = sc.nextInt();
-            //if (sc.hasNext()) {
-            //    String command = sc.nextLine();
-            //    if (command.equals("q")) {
-            //        System.out.println("Exit");
+            }*/
+//int value = sc.nextInt();
+//if (sc.hasNext()) {
+//    String command = sc.nextLine();
+//    if (command.equals("q")) {
+//        System.out.println("Exit");
 
-            //    } /*else {
-                    //System.out.println("Введите корректные значения: ");
-              //  };*/
+//    } /*else {
+//System.out.println("Введите корректные значения: ");
+//  };*/
            /* } else if (sc.hasNextInt()){
                 int value = sc.nextInt();
                 System.out.println("Мы ввели: ставку = " + value);
@@ -87,7 +95,4 @@ public class Handler {
                 // sc.close();
             }
             continue;*/
-        }
-    }
-}
 
