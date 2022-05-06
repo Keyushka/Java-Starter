@@ -19,7 +19,7 @@ public class Animal {
     }
 
 }
-/*public class Test2 {
+class Test2 {
     public static void main(String[] args) {
         Animal cat = new Animal();
         cat.setId(1);
@@ -28,4 +28,4 @@ public class Animal {
         System.out.println(cat.getId());
         System.out.println(cat.getName());
     }
-}*/
+}
