@@ -7,13 +7,17 @@ public class Task3_Delivery {
         int factorial = 1;
         Scanner sc = new Scanner(System.in);
         System.out.println("Введите количество клиентов: ");
-        int client = sc.nextInt();
-        System.out.print("Количество возможных вариантов доставки товара 1й машиной = ");
+        int numberOfClients = sc.nextInt();
+        System.out.print("Количество возможных вариантов доставки товара 1й машиной = " + factorial(numberOfClients));
+    }
 
-        do {
-            factorial *= client--;
-        } while (client > 0);
-
-        System.out.print(factorial);
+    static int factorial(int n) {
+        if (n == 0)
+            return 1;
+        else
+            return n * factorial(n - 1);
     }
 }
+// не рекомендуется использовать рекурсию так она может забить память, не рекомендуется использовать при больших значениях чисел
+// после ввода числа 32 - уже идет минусовое значение
+// после ввода числа 34 - уже идет нулевое значение
