@@ -1,5 +1,7 @@
 package javaStarter.lessons.lesson9;
 
+import java.util.Arrays;
+
 public class C14_MinArray {
     public static void main(String[] args) {
         // На 7 строке создаем массив целочисленных элементов с именем array размерностью в 10 элементов
@@ -17,5 +19,13 @@ public class C14_MinArray {
                 min = list[i];
         }
         System.out.println("Min is " + min);
+        ///------
+        String s = "Hello";
+        StringBuilder sb = new StringBuilder(s);
+        sb.reverse();
+        System.out.println(sb.toString());
+       // Arrays.copyOf();
+        Arrays.sort(list);
+        System.out.println(list[0]);
     }
 }

@@ -21,6 +21,9 @@ public class C10_ThreeDimensionalArrayFill {
                         {7, 8, 9}
                 }
         };
+
+        System.out.println(array.length); //строки
+        System.out.println(array[0].length); //индекса длина
         
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {

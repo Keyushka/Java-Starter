@@ -1,5 +1,7 @@
 package javaStarter.lessons.lesson9;
 
+import java.util.Arrays;
+
 public class C05_TwoDimentionalArray {
     // Массивы (двумерный массив).
 
@@ -29,5 +31,7 @@ public class C05_TwoDimentionalArray {
         System.out.print(array[2][0]);
         System.out.print(array[2][1]);
         System.out.print(array[2][2]);
+
+       // System.out.println(Arrays.deepToString(array));
     }
 }

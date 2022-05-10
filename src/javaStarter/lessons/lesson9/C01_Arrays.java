@@ -1,5 +1,7 @@
 package javaStarter.lessons.lesson9;
 
+import java.util.Arrays;
+
 public class C01_Arrays {
     // Массивы (одномерный массив).
 
@@ -16,6 +18,10 @@ public class C01_Arrays {
         array[3] = 40;
         array[4] = 50;
 
+       /* for (int i = 0; i < array.length; i++) {
+            array[i] = i*2 + 3;
+        }*/
+
         // На 21 строке выводим на экран значение элемента массива array по индексу 0
 
         System.out.println(array[0]);
@@ -23,5 +29,6 @@ public class C01_Arrays {
         System.out.println(array[2]);
         System.out.println(array[3]);
         System.out.println(array[4]);
+        //System.out.println(Arrays.toString(array));
     }
 }
