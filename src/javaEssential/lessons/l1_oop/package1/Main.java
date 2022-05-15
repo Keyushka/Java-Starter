@@ -3,8 +3,8 @@ package javaEssential.lessons.l1_oop.package1;
 import javaEssential.lessons.l1_oop.package2.ExampleInPackage2;
 import javaEssential.lessons.l1_oop.package2.Parent;
 
-public class Main {
-    public static void main(String[] args) {
+public class Main extends Parent{
+    public static void main (String[] args) {
         ExampleInPackage1 e1 = new ExampleInPackage1();
     //    System.out.println(e1.name1); //privet
         System.out.println(e1.name2); //package
@@ -16,11 +16,11 @@ public class Main {
     //    System.out.println(e2.name3); //protected
         System.out.println(e2.name4); //public
 
-        Parent p = new Parent();
-    //    System.out.println(e2.name1); //privet
-    //    System.out.println(e2.name2); //package
-    //    System.out.println(e2.name3); //protected
-        System.out.println(e2.name4); //public
+        Main p = new Main();
+    //    System.out.println(p.name1); //privet
+    //    System.out.println(p.name2); //package
+        System.out.println(p.name3); //protected
+        System.out.println(p.name4); //public
 
     }
 }

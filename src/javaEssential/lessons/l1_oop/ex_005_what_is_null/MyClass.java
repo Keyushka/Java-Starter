@@ -9,6 +9,10 @@ public class MyClass {
         Car car1 = null;      // можно экземпляру класса присвоить нал
         // int i = null;      // нельзя в примитивный тип впихнуть нал
 
+        /*Integer i2 = null;
+        int i3 = i2;
+        System.out.println(i3); // NullPointerException*/
+
         String str2 = (String) null; // Нал поддается кастованию в другие типы
         Car car2 = (Car) null;
 
