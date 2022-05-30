@@ -5,36 +5,47 @@ package javaStarter.homework.project;
 import java.util.Scanner;
 
 public class Task1 {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+    /*public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
         System.out.println("Введите число: ");
-        int number = scanner.nextInt();
-        sumDigits(number);
+        if (sc.hasNextInt()) {
+            int number = sc.nextInt();
+            System.out.println("Вы ввели число: " + number);
+            System.out.println("Сумма цифр данного числа = " + sumDigits(number));
+        } else {
+            System.out.println("Извините, но это явно не число. Перезапустите программу и попробуйте снова!");
+        }
 
     }
-    private static void sumDigits(int number){
+
+    private static int sumDigits(int number) {
         int sum = 0;
-        while(number != 0){
+        while (number != 0) {
             sum += (number % 10);
-            number/=10;
+            number /= 10;
         }
-        System.out.println("Сумма цифр данного числа = " + sum);
+        return sum;
+    }*/
+    public static void main(String[] args) {
+        String s = "Ro12m";
+        int l = s.length();
+
+        //boolean bResult = isNumber(s,l);
+        if(isNumber(s,l)) {
+            System.out.println(s + " is numeric");
+        }
+        else
+            System.out.println(s + " is not numeric");
+    }
+
+    static boolean isNumber(String s, int l) {
+        if(s == null || l == 0)
+            return false;
+
+        for(char c: s.toCharArray()) {
+            if(!Character.isDigit(c))
+                return false;
+        }
+        return true;
     }
 }
-
-    /*final Scanner s = new Scanner ( System.in );
-    final String line = s.nextLine ().trim ();
-    final char [] array = line.toCharArray ();
-
-    int sum = 0;
-    for ( final char c : array )
-        {
-        if ( !Character.isDigit ( c ) )
-        {
-        throw new IllegalArgumentException ();
-        }
-
-        sum = sum + Character.getNumericValue ( c );
-        }
-
-        System.out.println ( "sum = " + sum );*/

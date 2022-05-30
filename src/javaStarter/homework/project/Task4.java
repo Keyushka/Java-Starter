@@ -10,7 +10,6 @@ public class Task4 {
         Scanner sc = new Scanner(System.in);
         String date = sc.nextLine();
         System.out.println ( "Число даты = " + dateNumber(date) );
-        sc.close();
     }
 
     public static int dateNumber (String date) {
@@ -21,7 +20,7 @@ public class Task4 {
         {
             if ( !Character.isDigit ( c ) )
             {
-                throw new IllegalArgumentException ();
+                throw new IllegalArgumentException ("В веденном значении обнаружены либо буквы, либо недопустимые специальные символы");
             }
             sum = sum + Character.getNumericValue ( c );
         }
