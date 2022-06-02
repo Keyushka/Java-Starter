@@ -8,10 +8,10 @@ public class Main {
         Car car4 = new Car(6, 140.3, 1780);
         Car car5 = new Car(1, 195, 1560, "yellow");
 
-        System.out.println("Year: " + car1.getYear() + "; Speed: " + car1.getSpeed() + "; Weight: " + car1.getWeight() + "; Color: " + car1.getColor());
-        System.out.println("Year: " + car2.getYear() + "; Speed: " + car2.getSpeed() + "; Weight: " + car2.getWeight() + "; Color: " + car2.getColor());
-        System.out.println("Year: " + car3.getYear() + "; Speed: " + car3.getSpeed() + "; Weight: " + car3.getWeight() + "; Color: " + car3.getColor());
-        System.out.println("Year: " + car4.getYear() + "; Speed: " + car4.getSpeed() + "; Weight: " + car4.getWeight() + "; Color: " + car4.getColor());
-        System.out.println("Year: " + car5.getYear() + "; Speed: " + car5.getSpeed() + "; Weight: " + car5.getWeight() + "; Color: " + car5.getColor());
+        System.out.println("Car1: year = " + car1.getYear() + "; speed = " + car1.getSpeed() + "; weight = " + car1.getWeight() + "; color = " + car1.getColor());
+        System.out.println("Car2: year = " + car2.getYear() + "; speed = " + car2.getSpeed() + "; weight = " + car2.getWeight() + "; color = " + car2.getColor());
+        System.out.println("Car3: year = " + car3.getYear() + "; speed = " + car3.getSpeed() + "; weight = " + car3.getWeight() + "; color = " + car3.getColor());
+        System.out.println("Car3: year = " + car4.getYear() + "; speed = " + car4.getSpeed() + "; weight = " + car4.getWeight() + "; color = " + car4.getColor());
+        System.out.println("Car3: year = " + car5.getYear() + "; speed = " + car5.getSpeed() + "; weight = " + car5.getWeight() + "; color = " + car5.getColor());
     }
 }
