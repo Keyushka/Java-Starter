@@ -10,7 +10,7 @@ public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Введите радиус круга: ");
-        if ((sc.hasNextInt()) || (sc.hasNextFloat())) {
+        if ((sc.hasNextInt()) || (sc.hasNextDouble())) {
             double radius = sc.nextFloat();
             System.out.println("Площадь круга = " + MyArea.areaOfCircle(radius));
         } else {
