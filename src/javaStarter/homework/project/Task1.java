@@ -5,7 +5,7 @@ package javaStarter.homework.project;
 import java.util.Scanner;
 
 public class Task1 {
-    /*public static void main(String[] args) {
+    public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Введите число: ");
         if (sc.hasNextInt()) {
@@ -25,27 +25,5 @@ public class Task1 {
             number /= 10;
         }
         return sum;
-    }*/
-    public static void main(String[] args) {
-        String s = "Ro12m";
-        int l = s.length();
-
-        //boolean bResult = isNumber(s,l);
-        if(isNumber(s,l)) {
-            System.out.println(s + " is numeric");
-        }
-        else
-            System.out.println(s + " is not numeric");
-    }
-
-    static boolean isNumber(String s, int l) {
-        if(s == null || l == 0)
-            return false;
-
-        for(char c: s.toCharArray()) {
-            if(!Character.isDigit(c))
-                return false;
-        }
-        return true;
     }
 }

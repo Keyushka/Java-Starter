@@ -6,7 +6,11 @@ public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Введите радиус круга: ");
-        float radius = sc.nextFloat();
-        System.out.println("Площадь круга = " + MyArea.areaOfCircle(radius));
+        if ((sc.hasNextInt()) || (sc.hasNextFloat())) {
+            double radius = sc.nextFloat();
+            System.out.println("Площадь круга = " + MyArea.areaOfCircle(radius));
+        } else {
+            System.out.println("Извините, но это явно не число. Перезапустите программу и попробуйте снова!");
+        }
     }
 }
