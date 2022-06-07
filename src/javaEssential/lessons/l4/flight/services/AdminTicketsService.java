@@ -45,4 +45,25 @@ public class AdminTicketsService implements TicketsService {
         System.out.println("Билет с минимальной ценой для выбранной компании: ");
         System.out.println(ticketMinPrice);
     }
+
+    public Ticket findTheCheapestTicket() {
+        Ticket[] ticketsMin = new Ticket[flightSearchers.length];
+        for (int i = 0; i < flightSearchers.length; i++) {
+            Ticket[] allAvailableFlights = flightSearchers[i].getAllAvailableFlights();
+            ticketsMin[i] = findMinTicketsValue(allAvailableFlights);
+        }
+        return findMinTicketsValue(ticketsMin);
+    }
+
+    private Ticket findMinTicketsValue(Ticket[] tickets) {
+        int minPrice = tickets[0].getPrice();
+        Ticket tempMin = tickets[0];
+        for (int i = 0; i < tickets.length; i++) {
+            if (tickets[i].getPrice() < minPrice) {
+                minPrice = tickets[i].getPrice();
+                tempMin = tickets[i];
+            }
+        }
+        return tempMin;
+    }
 }
