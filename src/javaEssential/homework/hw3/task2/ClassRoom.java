@@ -1,6 +1,4 @@
 package javaEssential.homework.hw3.task2;
-import java.util.Random;
-
 // Создать класс, представляющий учебный класс ClassRoom.
 // Создайте класс ученик Pupil. В теле класса создайте методы void study(), void read(), void write(), void relax().
 // Создайте 3 производных класса ExcelentPupil, GoodPupil, BadPupil от класса базового класса Pupil и переопределите каждый из методов,
@@ -41,13 +39,6 @@ public class ClassRoom {
         getPupilInfo(pupils);
     }
 
-    private Pupil generatePupil() {
-        Random random = new Random();
-        Pupil pupil = new ExcelentPupil("pupil_" + random.nextInt(4));
-        return pupil;
-
-    }
-
     private void getPupilInfo(Pupil[] pupils) {
         for (Pupil p : pupils) {
             System.out.println("Ученик " + p.getNameOfPupil() + ": ");
@@ -71,7 +62,7 @@ public class ClassRoom {
 
     }
 
-    private Pupil generatePupil(String typeOfPupil) {
+/*    private Pupil generatePupil(String typeOfPupil) {
         String str = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
         Random random = new Random();
         StringBuffer sb = new StringBuffer();
@@ -91,4 +82,10 @@ public class ClassRoom {
         }
         return null;
     }
+
+    private Pupil generatePupil() {
+        Random random = new Random();
+        Pupil pupil = new ExcelentPupil("pupil_" + random.nextInt(4));
+        return pupil;
+    }*/
 }
