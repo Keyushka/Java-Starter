@@ -1,78 +1,45 @@
 package javaEssential.homework.hw4.task2;
 
-import javaEssential.homework.hw4.task2.services.AbstractHandler;
-import javaEssential.homework.hw4.task2.services.impl.DOCHandler;
-import javaEssential.homework.hw4.task2.services.impl.TXTHandler;
-import javaEssential.homework.hw4.task2.services.impl.XMLHandler;
+import javaEssential.homework.hw4.task2.impl.DOCHandler;
+import javaEssential.homework.hw4.task2.impl.TXTHandler;
+import javaEssential.homework.hw4.task2.impl.XMLHandler;
 
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        boolean keyOutSwitch = true;
-        Scanner scanner = new Scanner(System.in);
-        AbstractHandler handler = null;
-        System.out.println("\u001B[32m" + "Введите с клавиатуры один из трех форматов: XML, TXT, DOC, с которым будем работать / 0 - выход" + "\u001B[0m");
-        while (keyOutSwitch) {
-            switch (scanner.next().toUpperCase()) {
+        Scanner scan = new Scanner(System.in);
+        chooseDocumentFormat(scan);
+    }
+    private static void chooseDocumentFormat (Scanner scan) {
+        boolean input = true;
+        System.out.println("\u001B[35m" + "Введите формат документа для работы: XML, TXT, DOC (для выхода - exit)" + "\u001B[0m");
+        while (input) {
+            switch (scan.next().toUpperCase()) {
                 case "XML": {
-                    handler = new XMLHandler();
-                    keyOutSwitch = false;
+                    AbstractHandler xml = new XMLHandler();
+                    input = false;
                     break;
                 }
                 case "TXT": {
-                    handler = new TXTHandler();
-                    keyOutSwitch = false;
+                    AbstractHandler txt = new TXTHandler();
+                    input = false;
                     break;
                 }
                 case "DOC": {
-                    handler = new DOCHandler();
-                    keyOutSwitch = false;
+                    AbstractHandler doc = new DOCHandler();
+                    input = false;
                     break;
                 }
-                case "0": {
-                    keyOutSwitch = false;
+                case "EXIT": {
+                    input = false;
+                    System.out.println("Выход из программы");
                     break;
                 }
                 default: {
-                    System.out.println("Формат отсутствует в списке наличия");
+                    System.out.println("Программа не поддерживает данный формат. Попробуйте снова.");
                 }
             }
         }
-        if (handler == null) {
-            System.out.println("Небыло выбрано ниодного формата документа");
-        } else {
-            keyOutSwitch = true;
-        }
-        while (keyOutSwitch) {
-
-            System.out.println("\u001B[36m" + "1.Открыть документ  2.Создать документ  3.Редактировать документ  4.Сохранить документ  0.(или другой) выход" + "\u001B[0m");
-            switch (scanner.next()) {
-                case "1": {
-                    handler.open();
-                    break;
-                }
-                case "2": {
-                    handler.create();
-                    break;
-                }
-                case "3": {
-                    handler.change();
-                    break;
-                }
-                case "4": {
-                    handler.save();
-                    break;
-                }
-
-                default: {
-                    keyOutSwitch = false;
-                }
-            }
-        }
-        System.out.println("Конец программы");
-        scanner.close();
-
-
     }
 }
