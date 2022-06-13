@@ -1,4 +1,4 @@
-package javaEssential.homework.hw4.task4;
+package javaEssential.homework.hw4.task5;
 
 public class ProDocumentWorker extends Document {
 
