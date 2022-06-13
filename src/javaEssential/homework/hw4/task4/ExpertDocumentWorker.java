@@ -1,14 +1,15 @@
-package javaEssential.homework.hw3.task4;
+package javaEssential.homework.hw4.task4;
 
-public class ExpertDocumentWorker extends ProDocumentWorker{
+public class ExpertDocumentWorker extends Document {
+
     @Override
     void openDocument() {
-        super.openDocument();
+        System.out.println("Документ открыт");
     }
 
     @Override
     void editDocument() {
-        super.editDocument();
+        System.out.println("Документ отредактирован");
     }
 
     @Override

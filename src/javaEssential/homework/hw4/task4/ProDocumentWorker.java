@@ -1,9 +1,10 @@
-package javaEssential.homework.hw3.task4;
+package javaEssential.homework.hw4.task4;
 
-public class ProDocumentWorker extends DocumentWorker{
+public class ProDocumentWorker extends Document {
+
     @Override
     void openDocument() {
-        super.openDocument();
+        System.out.println("Документ открыт");
     }
 
     @Override
